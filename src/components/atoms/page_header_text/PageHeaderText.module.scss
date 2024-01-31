@@ -1,0 +1,17 @@
+.headerElement {
+  font-family: Roboto;
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 56px;
+  letter-spacing: 0em;
+  text-align: center;
+  &::after {
+    background-image: url("./images/underline.svg");
+    content: "";
+    display: block;
+    height: 18px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 251px;
+  }
+}

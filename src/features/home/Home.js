@@ -8,6 +8,7 @@ import work1 from "./images/work1.png"
 import work2 from "./images/work2.png"
 import work2Art from "./images/work2-art.png"
 import work3 from "./images/work3.png"
+import PageHeaderText from "../../components/atoms/page_header_text/PageHeaderText";
 
 export default function Home() {
   document.title = "Home";
@@ -17,7 +18,9 @@ export default function Home() {
       <Banner />
       <div className={style.catalogueContainer}>
 
-        <h2 className="text-align-center">How it works?</h2>
+        {/* <h2 className="text-align-center">How it works?</h2> */}
+
+        <PageHeaderText text="How it works?" className="text-align-center"/>
 
         <div className="mt-60">
           <LandscapeCatalog imageUrl={work1} titleNumber="1" titleText="Setup your profile & preferences" bodyText="Once you create an account, you can start to tell us your likes and dislikes so we can tailor the experience just for you." />

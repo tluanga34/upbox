@@ -46,7 +46,7 @@ function App() {
         <BrowserRouter>
           <div className="App" app-theme={globalState.theme}>
             <NavBar></NavBar>
-            <main>
+            <main className='main-body'>
               <RootRoutes />
             </main>
             <Footer></Footer>

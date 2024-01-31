@@ -5,8 +5,8 @@ import boxImage from "./images/box.png"
 
 export default function Banner() {
   return (
-    <div className={`bg-color-f5f8`}>
-      <Container className={`${style.BannerContainer} d-flex justify-content-between`}>
+    <div className={`${style.BannerContainer} bg-color-f5f8`}>
+      <Container className={`d-flex justify-content-between`}>
         <div className={style.textSection}>
           <h2 className={style.bannerHeadingText}>Look good without <br />
             leaving your house.</h2>
