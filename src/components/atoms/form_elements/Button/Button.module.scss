@@ -4,8 +4,9 @@
   padding: 6px 20px;
   background-color: #fff;
   text-transform: uppercase;
-  display: flex;
+  display: inline-flex;
   align-items: center;
+  cursor: pointer;
 
 
   &[btn-type="lg-pink"] {

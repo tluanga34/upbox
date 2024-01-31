@@ -8,6 +8,7 @@ import { AuthContextProvider } from './contexts/AuthContext';
 import NavBar from './components/organisms/navbar/NavBar';
 import Footer from './components/organisms/footer/Footer';
 import RootRoutes from './config/routes';
+import { BrowserRouter } from 'react-router-dom';
 
 function App() {
 
@@ -42,13 +43,15 @@ function App() {
         authState,
         authReducer
       }}>
-        <div className="App" app-theme={globalState.theme}>
-          <NavBar></NavBar>
-          <main>
-            <RootRoutes />
-          </main>
-          <Footer></Footer>
-        </div>
+        <BrowserRouter>
+          <div className="App" app-theme={globalState.theme}>
+            <NavBar></NavBar>
+            <main>
+              <RootRoutes />
+            </main>
+            <Footer></Footer>
+          </div>
+        </BrowserRouter>
       </AuthContextProvider>
     </GlobalContextProvider>
   );

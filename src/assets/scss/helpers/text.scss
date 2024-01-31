@@ -5,3 +5,12 @@ $transform : (uppercase, lowercase, capitalize);
     text-transform: $transName;
   }
 }
+
+
+$textAlign : (center, left, right);
+
+@each $alignName in $textAlign {
+  .text-align-#{$alignName} {
+    text-align: $alignName;
+  }
+}
