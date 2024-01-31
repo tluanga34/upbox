@@ -43,9 +43,9 @@ export default function NavBar() {
       <Container>
         <div className="d-flex justify-content-space-between align-items-center py-10">
           <div>
-            <a href="/">
+            <NavLink to="/">
               <SvgSprite name="logo" width="150" height="50" />
-            </a>
+            </NavLink>
           </div>
           <div className="">
             <ul className={style.NavItemContainer}>

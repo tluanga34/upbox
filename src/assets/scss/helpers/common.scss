@@ -6,3 +6,11 @@ $displayProps : (block, inline-block, inline, flex, inline-flex, grid, inline-gr
     display: $display;
   }
 }
+
+$positionProps : (relative, absolute, static, fixed, sticky);
+
+@each $position in $positionProps {
+  .position-#{$position} {
+    position: $position;
+  }
+}

@@ -5,7 +5,9 @@ import PortraitCatalog from "../../components/organisms/cards/catalog/PortraitCa
 import style from "./Home.module.scss";
 
 import work1 from "./images/work1.png"
-import work2 from "./images/work3.png"
+import work2 from "./images/work2.png"
+import work2Art from "./images/work2-art.png"
+import work3 from "./images/work3.png"
 
 export default function Home() {
   document.title = "Home";
@@ -18,13 +20,13 @@ export default function Home() {
         <h2 className="text-align-center">How it works?</h2>
 
         <div className="mt-60">
-          <LandscapeCatalog imageUrl={work1} titleText="Setup your profile & preferences" bodyText="Once you create an account, you can start to tell us your likes and dislikes so we can tailor the experience just for you." />
+          <LandscapeCatalog imageUrl={work1} titleNumber="1" titleText="Setup your profile & preferences" bodyText="Once you create an account, you can start to tell us your likes and dislikes so we can tailor the experience just for you." />
 
 
-          <PortraitCatalog titleText="Try it on at home" bodyText="Your box will arrive within 3-5 days (usually sooner) and you get the joy to unbox your Upbox. Try it all on and send back whatever you’re not in love with."/>
+          <PortraitCatalog className="mt-150" titleNumber="2" imageUrl={work2} bgImageUrl={work2Art} titleText={<div><p>Review your</p><p>custom box</p></div>} bodyText="Once we get to know you, we will show you the box we’ve crafted. This is your chance to approve it before we ship it to your house." />
 
-          
-          <LandscapeCatalog className="mt-50" imageUrl={work2} titleText="Try it on at home" bodyText="Your box will arrive within 3-5 days (usually sooner) and you get the joy to unbox your Upbox. Try it all on and send back whatever you’re not in love with." />
+
+          <LandscapeCatalog className="mt-100" titleNumber="3" imageUrl={work3} titleText="Try it on at home" bodyText="Your box will arrive within 3-5 days (usually sooner) and you get the joy to unbox your Upbox. Try it all on and send back whatever you’re not in love with." />
 
         </div>
       </div>

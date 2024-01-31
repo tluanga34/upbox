@@ -1,9 +1,9 @@
 .portraitCatalogContainer {
-  padding-left: 200px;
+  padding-left: 307px;
 }
 
 .imageSection {
-  flex-basis: 403px;
+  flex-basis: 307px;
   flex-grow: 0;
   flex-shrink: 0;
 }
@@ -24,4 +24,45 @@
   font-weight: 400;
   line-height: normal;
   letter-spacing: 0.18px;
+}
+
+.portraitTitleNumber,
+.landscapeTitleNumber {
+  color: #EF8094;
+  font-family: Roboto;
+  font-size: 220px;
+  font-style: normal;
+  font-weight: 400;
+  position: absolute;
+}
+
+.portraitTitleNumber {
+  bottom: -60px;
+  left: -69px;
+  z-index: 10;
+}
+
+.landscapeTitleNumber {
+  top: 1px;
+  left: 15px;
+}
+
+.portraitFgImage {
+  position: relative;
+  z-index: 10;
+  width: 404px;
+}
+
+.portraitBgImage {
+  position: absolute;
+  z-index: 1;
+  width: 270px;
+  left: 200px;
+  top: -51px;
+}
+
+.portraitTextSection {
+  padding-left: 75px;
+  max-width: 417px;
+  margin-top: 10px;
 }
