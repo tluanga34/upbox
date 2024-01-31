@@ -1,0 +1,7 @@
+$transform : (uppercase, lowercase, capitalize);
+
+@each $transName in $transform {
+  .text-transform-#{$transName} {
+    text-transform: $transName;
+  }
+}

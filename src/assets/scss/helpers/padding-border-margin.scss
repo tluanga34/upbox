@@ -1,0 +1,51 @@
+
+$spaceamounts: (0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 75, 100); // Adjust this to include the pixel amounts you need.
+$sides: (top, bottom, left, right); // Leave this variable alone
+
+@each $space in $spaceamounts {
+
+  .w-#{$space} {
+    width: #{$space} + '%';
+  }
+
+  .m-#{$space} {
+    margin: #{$space}px !important;
+  }
+
+  .p-#{$space} {
+    padding: #{$space}px !important;
+  }
+
+  .px-#{$space} {
+    padding-left: #{$space}px !important;
+    padding-right: #{$space}px !important;
+  }
+
+  .py-#{$space} {
+    padding-top: #{$space}px !important;
+    padding-bottom: #{$space}px !important;
+  }
+
+  .border-width-#{$space} {
+    border-width: #{$space}px;
+  }
+
+  @each $side in $sides {
+
+    .m#{str-slice($side, 0, 1)}-#{$space} {
+      margin-#{$side}: #{$space}px !important;
+    }
+
+    .p#{str-slice($side, 0, 1)}-#{$space} {
+      padding-#{$side}: #{$space}px !important;
+    }
+  }
+}
+
+$borderStyles : (solid, dashed);
+
+@each $style in $borderStyles {
+  .border-style-#{$style} {
+    border-style: $style;
+  }
+}

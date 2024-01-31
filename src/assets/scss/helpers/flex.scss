@@ -1,0 +1,15 @@
+$justifyContent : (space-between, flex-end, flex-start, center, space-between, space-around, space-evenly);
+
+@each $justify in $justifyContent {
+  .justify-content-#{$justify} {
+    justify-content: $justify;
+  }
+}
+
+$alignItems : (center, flex-start, flex-end, stretch);
+
+@each $align in $alignItems {
+  .align-items-#{$align} {
+    align-items: $align;
+  }
+}

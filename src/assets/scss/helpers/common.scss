@@ -1,0 +1,8 @@
+
+$displayProps : (block, inline-block, inline, flex, inline-flex, grid, inline-grid);
+
+@each $display in $displayProps {
+  .d-#{$display} {
+    display: $display;
+  }
+}

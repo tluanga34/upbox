@@ -1,0 +1,23 @@
+.NavBarMain {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  z-index: 10;
+  background-color: #fff;
+}
+
+.NavItemContainer {
+  padding: 0px;
+  white-space: nowrap;
+
+  .NavItem {
+    display: inline-block;
+  }
+
+  .NavItem a {
+    padding: 10px 20px;
+    text-decoration: none;
+    color: inherit;
+  }
+}
