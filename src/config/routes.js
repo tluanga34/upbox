@@ -1,6 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import Home from "../features/home/Home";
 import PageHeaderText from "../components/atoms/page_header_text/PageHeaderText";
+import DocumentTitle from "../components/atoms/doc_title/DocumentTitle";
 
 export default function RootRoutes() {
   return (
@@ -15,43 +16,43 @@ export default function RootRoutes() {
         exact
         strict
         path="/login"
-        element={<PageHeaderText text={"Login"}/>}
+        element={<DocumentTitle title="Login"><PageHeaderText text={"Login"}/></DocumentTitle>}
       />
       <Route
         exact
         strict
         path="/sign-up"
-        element={<PageHeaderText text={"Sign Up"}/>}
+        element={<DocumentTitle title="Sign Up"><PageHeaderText text={"Sign Up"}/></DocumentTitle>}
       />
       <Route
         exact
         strict
         path="/this-month"
-        element={<PageHeaderText text={"This Month"}/>}
+        element={<DocumentTitle title="This Month"><PageHeaderText text={"This Month"}/></DocumentTitle>}
       />
       <Route
         exact
         strict
         path="/skin"
-        element={<PageHeaderText text={"Skin"}/>}
+        element={<DocumentTitle title="Skin"><PageHeaderText text={"Skin"}/></DocumentTitle>}
       />
       <Route
         exact
         strict
         path="/hair"
-        element={<PageHeaderText text={"Hair"}/>}
+        element={<DocumentTitle title="Hair"><PageHeaderText text={"Hair"}/></DocumentTitle>}
       />
       <Route
         exact
         strict
         path="/bath"
-        element={<PageHeaderText text={"Bath"}/>}
+        element={<DocumentTitle title="Bath"><PageHeaderText text={"Bath"}/></DocumentTitle>}
       />
       <Route
         exact
         strict
         path="/sale"
-        element={<PageHeaderText text={"sale"}/>}
+        element={<DocumentTitle title="Sale"><PageHeaderText text={"Sale"}/></DocumentTitle>}
       />
     </Routes>
   )
