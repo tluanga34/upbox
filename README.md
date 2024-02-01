@@ -1,70 +1,53 @@
-# Getting Started with Create React App
+## Code Structure
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A folder structure is maintained in a way to group like items together
+<br>
 
-## Available Scripts
+#### Features
+All page components are fall under this category. i.e Home Page and all other Navigation pages.
+<br>
 
-In the project directory, you can run:
+#### Components
+All reusable elements are groupped in this folder. Components are divided into <b>Atom</b> and <b>Organisms</b>. Atoms are small components that have very minimal elements such as a single button. On the other components with larger elements are classified as Organisms
+<br>
 
-### `npm start`
+#### CSS
+All helpers SCSS are grouped by scss_index.scss and attached to App.js. Instead of importing bootstrap helper classes, they are created per need basis in the scss/helpers folder.
+<br>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+#### Context
+Multilayer of contexts are maintained. GlobalContext is the most outer context and this manage to maintain application wide settings such as theme info.
+AuthContext is another layer as the child of globalContext which is configured to maintain userAuthentication state. 
+<br>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+#### SVGSpriteIcons
+SVG Sprite Icons are generated using an online tool https://svgsprit.es/. All source svg files are stored in the assets/icons/svg_sprite_sources folder and this is not supposed to be imported in the code. When a new icon is needed, add that new svg icon into this folder, then upload it all to https://svgsprit.es/ to create an updated svg sprite, then download the svgSprite file. The SVGSprite is used as react component inside src/components/atoms/svg_sprite. Replace the sprite.svg file then it's ready for use.
+```
+<SvgSprite name="instagram" size="20"/>
+```
+Normally most icons are squares that means passing size props is sufficient as it translates as width and height.
+But there are exceptional case where some icons are rectangular in shape i.e brand icon. If the icon is rectangular instead of passing size we can pass width and height
+```
+<SvgSprite name="instagram" width="150" height="50"/>
+```
+<br>
 
-### `npm test`
+#### Images
+Most Images that the page need are stored either in the features or components level. In the live scenario themse images are supposed to be stored in a CDN. 
+<br>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### How to start development
+If you freshly cloned the repo run ```yarn``` in your termninal
+To start the localserver type ```npm start```
+<br>
 
-### `npm run build`
+#### Deployment
+To generate a build, run ```npm run build```. You'll off course need to run ```yarn``` if you freshly cloned the repo.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+#### Preview Demo
+Check the code running here:
+http://lalnun-assignment-upbox.s3-website.ap-south-1.amazonaws.com/
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Cheers.......
