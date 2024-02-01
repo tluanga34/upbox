@@ -9,6 +9,7 @@ import work2 from "./images/work2.png"
 import work2Art from "./images/work2-art.png"
 import work3 from "./images/work3.png"
 import PageHeaderText from "../../components/atoms/page_header_text/PageHeaderText";
+import { NavLink } from "react-router-dom";
 
 export default function Home() {
   document.title = "Home";
@@ -20,7 +21,7 @@ export default function Home() {
 
         {/* <h2 className="text-align-center">How it works?</h2> */}
 
-        <PageHeaderText text="How it works?" className="text-align-center"/>
+        <PageHeaderText text="How it works?" className="text-align-center" />
 
         <div className="mt-60">
           <LandscapeCatalog imageUrl={work1} titleNumber="1" titleText="Setup your profile & preferences" bodyText="Once you create an account, you can start to tell us your likes and dislikes so we can tailor the experience just for you." />
@@ -34,7 +35,9 @@ export default function Home() {
         </div>
       </div>
       <div className="text-align-center mt-100 mb-100 mb-mobile-50 mt-mobile-50">
-        <Button type="lg-pink">Try It For Yourself</Button>
+        <NavLink to="/try-upbox" title="try-upbox">
+          <Button type="lg-pink">Try It For Yourself</Button>
+        </NavLink>
       </div>
     </div>
   )
