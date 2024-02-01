@@ -42,7 +42,7 @@
 
 @media screen and (max-width: 1190px) {
   .textSection {
-    padding-bottom: 300px;
+    padding-bottom: 158px;
   }
 
   .Image {
@@ -53,6 +53,17 @@
 
 @media screen and (max-width: 765px) {
 
+  .bannerHeadingText {
+    font-family: "DM Serif Text";
+    font-size: 62px;
+    line-height: 1em;
+    margin-bottom: 40px;
+  }
+
+  .bannerSubheadingText {
+    font-size: 22px;
+  }
+  
   .Innercontainer {
     display: block !important;
   }

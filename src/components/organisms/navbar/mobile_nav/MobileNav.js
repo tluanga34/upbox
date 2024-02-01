@@ -23,7 +23,7 @@ export default function MobileNav({ navItems, className = '' }) {
         <ul className={style.NavItemsContainer}>
           {navItems.map(eachNavItem =>
             <li className={style.NavItem} key={eachNavItem.id}>
-              <NavLink>{eachNavItem.name}</NavLink>
+              <NavLink to={eachNavItem.href} onClick={e=>{setMenuOpen(false)}}>{eachNavItem.name}</NavLink>
             </li>
           )}
         </ul>

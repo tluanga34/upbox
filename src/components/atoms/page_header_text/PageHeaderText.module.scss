@@ -5,6 +5,7 @@
   line-height: 56px;
   letter-spacing: 0em;
   text-align: center;
+
   &::after {
     background-image: url("./images/underline.svg");
     content: "";
@@ -14,4 +15,17 @@
     background-position: center;
     background-size: 251px;
   }
+
+
+  @media screen and (max-width: 768px) {
+    font-family: "DM Serif Text";
+    font-size: 66px;
+
+    &::after {
+      height: 33px;
+      background-size: 348px;
+    }
+
+  }
+
 }

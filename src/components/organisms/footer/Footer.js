@@ -5,8 +5,8 @@ import SvgSprite from "../../atoms/svg_sprite/SvgSprite";
 export default function Footer() {
   return (
     <footer className="p-20">
-      <div className="px-40 py-20 border-color-ed bg-color-fa border-style-solid border-width-5">
-        <Container className="d-flex justify-content-space-between align-items-center">
+      <div className="px-40 px-mobile-20 py-20 border-color-ed bg-color-fa border-style-solid border-width-5">
+        <Container className="d-flex justify-content-space-between align-items-center px-mobile-0">
           <div>
             <NavLink to="/">
               <SvgSprite width="150" height="50" />
