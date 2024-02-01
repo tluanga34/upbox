@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import SvgSprite from "../../../atoms/svg_sprite/SvgSprite";
 import style from "./MobileNav.module.scss";
 import { NavLink } from "react-router-dom";
@@ -6,6 +6,11 @@ import { NavLink } from "react-router-dom";
 export default function MobileNav({ navItems, className = '' }) {
 
   const [menuOpen, setMenuOpen] = useState(false);
+  const navItemsMobile = useRef([...navItems, {
+    name: "Login",
+    href: "/login",
+    id: navItems[navItems.length - 1].id + 1
+  }]).current;
 
   return (
     <div className={className}>
@@ -13,7 +18,7 @@ export default function MobileNav({ navItems, className = '' }) {
         <SvgSprite name="hamburger" />
       </button>
 
-      <div className={`${style.SlidingMenu} ${menuOpen ? style.active : "''"} bg-color-f5f8` }>
+      <div className={`${style.SlidingMenu} ${menuOpen ? style.active : "''"} bg-color-f5f8`}>
 
         <button className="bg-color-transparent border-color-transparent position-absolute right-20 top-20" onClick={e => { setMenuOpen(false) }}>
           <SvgSprite name="hamburger-close" />
@@ -21,9 +26,9 @@ export default function MobileNav({ navItems, className = '' }) {
 
 
         <ul className={style.NavItemsContainer}>
-          {navItems.map(eachNavItem =>
+          {navItemsMobile.map(eachNavItem =>
             <li className={style.NavItem} key={eachNavItem.id}>
-              <NavLink to={eachNavItem.href} onClick={e=>{setMenuOpen(false)}}>{eachNavItem.name}</NavLink>
+              <NavLink to={eachNavItem.href} onClick={e => { setMenuOpen(false) }}>{eachNavItem.name}</NavLink>
             </li>
           )}
         </ul>

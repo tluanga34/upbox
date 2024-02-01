@@ -14,7 +14,7 @@ export default function Banner() {
           <p className={style.bannerSubheadingText}>Upbox is the easiest way to look your best without having to hunt for the perfect makeup combination. Our stylists curate the latest trends and send them directly to your door every month.</p>
 
 
-          <NavLink to="sign-up">
+          <NavLink to="sign-up" title="Sign up for free">
             <Button type="lg-pink" className="mt-50">SIGN UP</Button>
           </NavLink>
 
