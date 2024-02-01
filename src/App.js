@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import './App.css';
 import "./assets/scss/scss_index.scss";
-import "./assets/icomoon/style.css";
 import "./assets/fonts/fonts_index.scss";
 import { GlobalContextProvider } from './contexts/GlobalContext';
 import { AuthContextProvider } from './contexts/AuthContext';
