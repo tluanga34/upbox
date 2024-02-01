@@ -1,0 +1,33 @@
+.SlidingMenu {
+  width: 100%;
+  position: fixed;
+  top: 0px;
+  right: -100%;
+  height: 100vh;
+  transition: right 0.3s;
+
+  &.active {
+    right: 0%;
+  }
+}
+
+.NavItemsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+
+.NavItem {
+  display: block;
+  a {
+    padding: 20px 10px;
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+    font-size: 25px;
+  }
+}

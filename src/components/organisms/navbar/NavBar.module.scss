@@ -7,22 +7,20 @@
   background-color: #fff;
 }
 
-.NavItemContainer {
-  padding: 0px;
-  white-space: nowrap;
+.DesktopNav {
+  display: block;
+}
 
-  .NavItem {
-    display: inline-block;
+.MobileNav {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .DesktopNav {
+    display: none;
   }
 
-  .NavItem a {
-    padding: 10px 20px;
-    text-decoration: none;
-    color: inherit;
-
-    &:global(.active) {
-      font-family: "Roboto Black";
-      font-weight: 700;
-    }
+  .MobileNav {
+    display: block;
   }
 }

@@ -66,3 +66,9 @@
   max-width: 417px;
   margin-top: 10px;
 }
+
+@media screen and (max-width: 840px) {
+  .portraitCatalogContainer {
+    padding-left: calc(122vw - 687px);
+  }
+}

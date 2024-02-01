@@ -4,6 +4,23 @@ $sides: (top, bottom, left, right); // Leave this variable alone
 
 @each $space in $spaceamounts {
 
+  
+  .left-#{$space} {
+    left: #{$space}px;
+  }
+  
+  .right-#{$space} {
+    right: #{$space}px;
+  }
+  
+  .top-#{$space} {
+    top: #{$space}px;
+  }
+  
+  .bottom-#{$space} {
+    bottom: #{$space}px;
+  }
+  
   .w-#{$space} {
     width: #{$space} + '%';
   }

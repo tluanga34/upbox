@@ -5,6 +5,8 @@ import TopBarDecorator from "../../atoms/top_bar_decorator/TopBarDecorator";
 import style from "./NavBar.module.scss"
 import Button from "../../atoms/form_elements/Button/Button";
 import { NavLink } from "react-router-dom";
+import DesktopNav from "./desktop_nav/DesktopNav";
+import MobileNav from "./mobile_nav/MobileNav";
 
 export default function NavBar() {
 
@@ -48,18 +50,10 @@ export default function NavBar() {
             </NavLink>
           </div>
           <div className="">
-            <ul className={style.NavItemContainer}>
-              {navDataItems.map(item => <li className={style.NavItem} key={item.id}>
-                <NavLink to={item.href} className="text-transform-uppercase">{item.name}</NavLink>
-              </li>)}
-              <li className={style.NavItem}>
-                <NavLink to="/login">
-                  <Button>Login</Button>
-                </NavLink>
-              </li>
-            </ul>
 
-
+            <DesktopNav navItems={navDataItems} className={style.DesktopNav}/>
+           
+            <MobileNav navItems={navDataItems} className={style.MobileNav}/>
           </div>
         </div>
       </Container>

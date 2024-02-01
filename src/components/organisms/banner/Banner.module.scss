@@ -30,3 +30,38 @@
   height: 103%;
   bottom: -68px;
 }
+
+@media screen and (max-width: 1190px) {
+  .textSection {
+    padding-bottom: 300px;
+  }
+
+  .Image {
+    height: unset;
+    width: 80vw;
+  }
+}
+
+@media screen and (max-width: 765px) {
+
+  .Innercontainer {
+    display: block !important;
+  }
+  
+  .textSection {
+    padding-bottom: 30px;
+    max-width: unset;
+    width: 100%;
+  }
+
+  .ImageSection {
+    flex-basis: 100%;
+    flex-grow: 0;
+    flex-shrink: 0;
+  }
+
+  .Image {
+    position: static;
+    width: 100%;
+  }
+}

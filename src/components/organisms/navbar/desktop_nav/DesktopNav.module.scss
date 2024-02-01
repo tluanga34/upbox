@@ -1,0 +1,24 @@
+
+.NavItemContainer {
+  padding: 0px;
+  white-space: nowrap;
+
+  .NavItem {
+    display: inline-block;
+  }
+
+  .NavItem a {
+    padding: 10px 20px;
+    text-decoration: none;
+    color: inherit;
+
+    &:last-child{
+      padding-right: 0px;
+    }
+
+    &:global(.active) {
+      font-family: "Roboto Black";
+      font-weight: 700;
+    }
+  }
+}
