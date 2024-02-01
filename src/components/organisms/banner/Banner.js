@@ -19,9 +19,10 @@ export default function Banner() {
           </NavLink>
 
         </div>
-        <div className={style.ImageSection}>
+        <div></div>
+        {/* <div className={style.ImageSection}>
+        </div> */}
           <img src={boxImage} className={style.Image} />
-        </div>
       </Container>
     </div>
   )

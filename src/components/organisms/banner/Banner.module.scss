@@ -5,6 +5,7 @@
 
 .BannerContainer {
   overflow: hidden;
+  position: relative;
 }
 
 .bannerHeadingText {
@@ -19,16 +20,24 @@
   line-height: normal;
 }
 
-.ImageSection {
-  position: relative;
-  flex: 1;
-}
-
 .Image {
   position: absolute;
-  right: -106px;
+  right: 0px;
   height: 103%;
   bottom: -68px;
+}
+
+@media screen and (min-width: 1850px) {
+  .Image {
+    // right: 50%
+  }
+}
+
+@media screen and (max-width: 1320px) {
+  .Image {
+    height: unset;
+    width: calc(100vw - 323px);
+  }
 }
 
 @media screen and (max-width: 1190px) {
@@ -55,14 +64,9 @@
     width: 100%;
   }
 
-  .ImageSection {
-    flex-basis: 100%;
-    flex-grow: 0;
-    flex-shrink: 0;
-  }
-
   .Image {
     position: static;
-    width: 100%;
+    width: 145%;
+    transform: translate(-18%, 0px);
   }
 }
