@@ -13,13 +13,13 @@ export default function Footer() {
             </NavLink>
           </div>
           <div>
-            <a href="https://www.instagram.com" target="_blank">
+            <a href="https://www.instagram.com/upbox" target="_blank">
               <SvgSprite size="40" name="instagram" />
             </a>
-            <a href="https://www.facebook.com" target="_blank">
+            <a href="https://www.facebook.com/upbox" target="_blank">
               <SvgSprite size="40" name="facebook" />
             </a>
-            <a href="https://twitter.com" target="_blank">
+            <a href="https://twitter.com/upbox" target="_blank">
               <SvgSprite size="40" name="twitter" />
             </a>
           </div>

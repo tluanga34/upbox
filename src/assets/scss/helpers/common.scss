@@ -1,9 +1,26 @@
 
-$displayProps : (block, inline-block, inline, flex, inline-flex, grid, inline-grid);
+$displayProps : (none, block, inline-block, inline, flex, inline-flex, grid, inline-grid);
 
 @each $display in $displayProps {
   .d-#{$display} {
     display: $display;
+  }
+  
+  @media screen and (min-width: 1281px) {
+    .d-desktop-#{$display} {
+      display: $display !important;
+    }
+  }
+  @media screen and (max-width: 1280px) {
+    .d-tablet-#{$display} {
+      display: $display !important;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .d-mobile-#{$display} {
+      display: $display Im !important;
+    }
   }
 }
 

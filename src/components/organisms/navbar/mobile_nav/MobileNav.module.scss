@@ -1,9 +1,9 @@
 .SlidingMenu {
   width: 100%;
   position: fixed;
-  top: 0px;
+  top: 8px;
   right: -100%;
-  height: 100vh;
+  height: calc(100vh - 8px);
   transition: right 0.3s;
 
   &.active {
