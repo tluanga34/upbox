@@ -12,7 +12,7 @@ All reusable elements are groupped in this folder. Components are divided into <
 <br>
 
 #### CSS
-All helpers SCSS are grouped by scss_index.scss and attached to App.js. Instead of importing bootstrap helper classes, they are created per need basis in the scss/helpers folder.
+All helpers SCSS are grouped by scss_index.scss and attached to App.js. Instead of importing bootstrap helper classes, they are created per need basis in the scss/helpers folder. Each feature and components have their on module css for customising the elements
 <br>
 
 #### Context
