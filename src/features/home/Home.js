@@ -33,7 +33,7 @@ export default function Home() {
 
         </div>
       </div>
-      <div className="text-align-center mt-100 mb-100">
+      <div className="text-align-center mt-100 mb-100 mb-mobile-50 mt-mobile-50">
         <Button type="lg-pink">Try It For Yourself</Button>
       </div>
     </div>

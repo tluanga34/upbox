@@ -5,9 +5,9 @@ export default function PortraitCatalog({ className = '', titleNumber, imageUrl,
     <div className={`${className} ${style.portraitCatalogContainer}`}>
 
       <div className="position-relative">
+        <h2 className={style.portraitTitleNumber}>{titleNumber}</h2>
         <img className={style.portraitFgImage} src={imageUrl} />
         <img className={style.portraitBgImage} src={bgImageUrl} />
-        <h2 className={style.portraitTitleNumber}>{titleNumber}</h2>
       </div>
 
       <div className={style.portraitTextSection}>

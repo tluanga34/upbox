@@ -72,3 +72,34 @@
     padding-left: calc(122vw - 687px);
   }
 }
+
+@media screen and (max-width: 768px) {
+
+  .portraitTitleNumber {
+    position: static;
+    line-height: 175px;
+    padding-left: 20px;
+  }
+  
+  .portraitFgImage {
+    width: 100%;
+  }
+  
+  .portraitBgImage {
+    display: none;
+  }
+  
+  .landscapeFlexContainer {
+    flex-wrap: wrap;
+  }
+  
+  .landscapeTextSection,
+  .imageSection {
+    flex-basis: 100%;
+  }
+
+  .portraitTextSection,
+  .landscapeTextSection {
+    padding: 10px 20px !important;
+  }
+}
